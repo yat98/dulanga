@@ -1,0 +1,602 @@
+/* BODY */
+body{
+    position: relative;
+    height: 100vh;
+}
+
+.m-atas{
+    margin-top: 130px !important;
+}
+
+.radius-10{
+    border-radius: 10px;
+}
+
+#sejarah,#kegiatan,#gallery,#testimoni,#footer,.navbar{
+    overflow: hidden;
+}
+
+/* NAV */
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+.navbar-brand{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.nav-item.btn{
+    font-weight: 600;
+}
+
+.nav-link{
+    height: 15px;
+    font-weight: 800;
+}
+
+.bg-blue{
+    background-color: #7AA1D2;
+}
+
+.nav-link:hover::after,.active::after{
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #CC95C0;
+    margin-top: 10px;
+}
+
+.hilang{
+    opacity: 0;
+    transition: 3s;
+}
+
+.muncul{
+    opacity: 1;
+}
+
+.hilang-atas,.hilang-bawah,.hilang-kiri,.hilang-kanan,.hilang-kiri-rotate,.hilang-kanan-rotate{
+    transform: translate(0,-100px);
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+
+.hilang-bawah{
+    transform: translate(0,80px);
+}
+
+.hilang-kiri{
+    transform: translate(-100px,0);
+}
+
+.hilang-kiri-rotate{
+    transform: translate(-100px,0) rotate(-25deg);
+}
+
+.hilang-kanan{
+    transform: translate(100px,0);
+}
+
+.hilang-kanan-rotate{
+    transform: translate(100px,0) rotate(25deg);
+}
+
+.muncul-atas,.muncul-bawah,.muncul-kanan,.muncul-kiri,.muncul-kiri-rotate,.muncul-kanan-rotate{
+    transform: translate(0,0);
+    transition: 1s ease-in;
+    opacity: 1;
+}
+
+.muncul-kiri-rotate,.muncul-kanan-rotate{
+    transform: translate(0,0) rotate(0deg);
+}
+
+
+/* HEADER STYLE */
+#header{
+    background-image: url(../img/bg/bg-header.jpg);
+    background-size: 100% 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    transition: 2s;
+    background-attachment: fixed;
+    background-position: top center;	
+    overflow: hidden;
+    min-height: 600px;
+}
+
+#header::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(to top,rgba(0, 0, 0,0.5),rgba(36, 36, 36, 0.5));
+    max-height: 100%;
+    width: 100%;;
+    overflow: hidden;
+}
+
+.border-gradient-header{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    border: 30px solid;
+    border-image: linear-gradient(to bottom,#7AA1D2, #DBD4B4, #CC95C0);
+    border-image-slice: 1;
+    transition: 1s;
+    height: 100%;
+}
+
+
+#header h1,#header h3{
+    text-shadow: 1px 1px 4px black;
+    position: relative;
+    transition: .5s;
+    z-index: 2;
+}
+
+.border-custom{
+    height: 5px;
+    width: 150px;
+    border-radius: 5px;
+    background-image: linear-gradient(to left,#7AA1D2, #DBD4B4, #CC95C0);
+    position: relative;
+    z-index: 2;
+}
+
+.logo{
+    position: relative;
+    z-index: 2;
+    width: 130px;
+    height: 150px;
+}
+
+#header h3{
+    font-size: 45px;
+    font-family: 'Kaushan Script', cursive;    
+}
+
+#header h1{
+    font-size: 85px;
+    font-family: 'Arvo', serif;
+}
+
+/* GALLERY */
+#gallery{
+    background-color: white;
+    position: relative;
+}
+
+.video{
+    position: relative;
+    z-index: 2;
+}
+
+.btn-login{
+    border-radius: 20px;
+}
+
+/* SEJARAH */
+#sejarah{
+    background-image: url(../img/bg/ayunan.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: relative;
+    text-align: justify;
+    border: 30px solid;
+    border-image: linear-gradient(to top,#7AA1D2, #DBD4B4, #CC95C0);
+    border-image-slice: 1;
+    transition: .5s;
+}
+
+.text-sejarah{
+    color: rgb(199, 199, 199) !important;
+}
+
+.img-bongo{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    z-index: 2;
+}
+
+#sejarah h2,#kegiatan h2,.border-bottom-custom,#gallery-foto h2,#sejarah-detail h2{
+    display: inline-block;
+    padding-bottom: 20px;
+    border-bottom: 5px solid #7AA1D2;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.sejarah-img{
+    position: relative;
+}
+
+.sejarah-img::after,.sejarah-img::before{
+    content: "";
+    display: block;
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+}
+.sejarah-img::after{
+    background-color: #CC95C0;
+    transform: rotate(-20deg);
+}
+
+.sejarah-img::before{
+    background-color: #7AA1D2;
+    transform: rotate(20deg);
+}
+
+.selengkapnya{
+    position: relative;
+    z-index: 1;
+}
+
+/* KEGIATAN */
+#kegiatan{
+    position: relative;
+}
+
+.btn-cari{
+    background-color: #7AA1D2;
+    border: none;
+    color: white;
+}
+
+.btn-cari:hover{
+    background-color: rgb(97, 150, 214);
+    border: none;
+    color: white;
+}
+
+.bg-gradient{
+    background-image: linear-gradient(to left,#7AA1D2, #DBD4B4, #CC95C0);
+}
+
+#particle,#particle1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.blog{
+    border-radius: 20px;
+    border: 5px solid white;
+    overflow: hidden;
+}
+
+.kegiatan-img,.kegiatan-img-height{
+    height: 250px;
+    width: 100%;
+}
+
+.kegiatan-img-height{
+    height: 350px;
+}
+
+#kegiatan .nav-link:hover::after,#kegiatan .active::after,#gallery-foto .active::after{
+    display: none;
+}
+
+.wave{
+    height: 250px;
+    background-image: url(../img/bg/shap1.png);
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#footer{
+    padding-top: 50px;
+}
+
+/* TESTIMONI */
+#testimoni{
+    overflow: hidden;
+}
+
+.testimoni-img{
+    cursor: pointer;
+    transition: .5s;
+}
+
+.besar{
+    height: 90px;
+    width: 90px;
+}
+
+.kecil{
+    height: 60px;
+    width: 60px;
+    opacity: .5;
+}
+
+.img-tinggi{
+    height: 100px;
+}
+
+.nama{
+    transition: .5s;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.profesi{
+    transition: .5s;
+    color: gray;
+}
+
+.caption{
+    height: 105px;
+    transition: .5s;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* FOOTER */
+#footer{
+    position: relative;
+    font-weight: 600;
+    background-image: linear-gradient(to bottom,#7AA1D2, #DBD4B4, #CC95C0);
+}
+
+.footer-rotate{
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    background-repeat:no-repeat;
+    background-position:center;
+    margin-top: -50px;  
+}
+
+.footer-last{
+    
+}
+.icon-hov{
+    font-size: 26px;
+}
+
+/* SCROLL UP */
+.scroll-up{
+    position: fixed;
+    bottom: 10px;
+    cursor: pointer;
+    border-radius:50%;
+    right: 10px;
+    font-size: 20px;
+    background-color: #7AA1D2;
+    color: white;
+    z-index: 2;
+}
+
+/* GALLERRY */
+#gallery-foto{
+    position: relative;
+}
+
+.foto-container{
+    height: 400px;
+    position: relative;
+    opacity: .7;
+    overflow: hidden;
+}
+
+.foto{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;   
+    border-radius: 15px;
+}
+
+.foto-container:hover::after{
+    content: "";
+    display: block;
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    border-top: 5px solid #CC95C0;
+    border-left: 5px solid #CC95C0;
+    border-top-left-radius: 15px;
+}
+.foto-container:hover::before{
+    content: "";
+    display: block;
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    border-bottom: 5px solid rgb(51, 91, 139);
+    z-index: 4;
+    border-right: 5px solid rgb(51, 91, 139);
+    border-bottom-right-radius: 15px;
+}
+
+.foto-container:hover{
+    cursor: pointer;
+    opacity: 1;
+    transform: translateY(-10px) scale(1.02);
+}
+
+.genap{
+    transform: translateY(20px) scale(1.02) ;
+}
+
+/* LOGIN */
+.login-container{
+    height: 100vh;
+    display: flex;
+}
+
+.login{
+    border-radius: 10px;
+    margin: auto;
+    background-image: linear-gradient(to bottom,#4568DC, #B06AB3);
+}
+
+.form-container{
+    padding: 5px;
+    border-bottom: 2px solid lightgray;
+    overflow: hidden;
+}
+
+.login-icon{
+    font-size: 35px;
+}
+
+.control-form,.control-form:focus,.control-form:active{
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none
+}
+
+.control-form::placeholder{
+    color: white;
+    font-style: italic;
+}
+
+.login-button{
+    border-radius:20px;
+    font-weight: 800;
+}
+
+@media (max-width: 991px){
+    /* NAVBAR */
+    .navbar{
+        text-align:center;
+    }
+
+    .nav-link{
+        height: 35px;
+    }
+
+    .nav-link:hover::after,.active::after{
+        display:none;
+    }
+
+    /* HEADER */
+    .border-gradient-header,#sejarah{
+        border: none;
+    }   
+
+    .logo{
+        width: 100px;
+        height: 120px;
+    }
+
+    #header h3{
+        font-size: 30px;
+        padding-top: 80px;
+    }
+    
+    #header h1{
+        font-size: 65px;
+    }
+
+    /* KEGIATAN */
+    #search{
+        margin-top: 25px !important;
+    }
+
+    .genap{
+        transform: translateY(0) scale(1) ;
+    }
+
+    /* SEJARAH */
+    #sejarah{
+        text-align:center;
+    }
+
+    /* TESTIMONI */
+    .caption{
+        height: 130px;
+        margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    #footer{
+        text-align:center !important;
+    }
+}
+
+@media (max-width: 480px){
+    #header h3{
+        font-size: 28px;
+    }
+    #header h1{
+        font-size: 40px;
+    }    
+    .logo{
+        width: 100px;
+        height: 120px;
+    }
+    #header{
+        height: 100vh;
+    }
+    .navbar{
+        text-align:center;
+    }
+    .nav-link{
+        height: 35px;;
+    }
+    .nav-link:hover::after,.active::after{
+        display:none;
+    }
+    .img-bongo,.sejarah-img::after,.sejarah-img::before{
+        width: 200px;
+        height: 150px;
+    }
+    .img-bongo{
+        z-index: 2;
+    }
+    .wave{
+        background-size: 100% 100%;
+        height: 120px;
+    }
+    #search{
+        margin-top: 25px !important;
+    }
+    .caption{
+        height: 150px;
+        font-size: 20px;
+    }
+    .besar{
+        height: 60px;
+        width: 60px;
+    }
+    .kecil{
+        height: 45px;
+        width: 45px;
+    }
+}
+
+@media (max-height: 310px){
+    #header{
+        height: 500px;
+    }
+    #header h3{
+        font-size: 30px;
+    }
+    #header h1{
+        font-size: 45px;
+    }    
+    .logo{
+        width: 80px;
+        height: 100px;
+    }
+}
